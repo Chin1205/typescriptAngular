@@ -88,6 +88,22 @@ function change(consonant: string) {
 console.log("3. Change it up!")
 console.log(change(txt));
 
+//Sir Rain's Version
+var c = "Cat30"; 
+
+var checkList = "AabcdEefghIijklmnOopqrstUuvwxyz";
+var newString = c.replace(/[a-z]/gi, s => checkList[(checkList.indexOf(s.toLowerCase()) + 1) % checkList.length]);
+
+console.log("NEW STRING: " + newString);
+
+//Another Version
+export const newVersionString = (c: any) => {
+    let checkList = "AabcdEefghIijklmnOopqrstUuvwxyz";
+    let output = c.replace(/[a-z]/gi, (s: any) => checkList[(checkList.indexOf(s.toLowerCase()) + 1) % checkList.length]);
+    console.log("New String: " + output);
+}
+newVersionString('Cat30'); 
+
 //4
 function moveZeros(array: any) {
     var length = array.length,
@@ -108,3 +124,5 @@ var array = [false, 2, 0, 0, 3, 0, 5, 3, "a"];
 
 console.log("4. Moving zeroes to the end")
 console.log(...moveZeros(array));
+
+//var newString = c.replace(/[a-z]/gi, s => checkList[(checkList.indexOf(s.toLowerCase()) + 1) % checkList.length]);

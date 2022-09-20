@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addPlace = exports.displayPlaces = exports.addWheels = void 0;
+exports.newVersionString = exports.addPlace = exports.displayPlaces = exports.addWheels = void 0;
 //1
 var myList = [];
 const addWheels = (...wheelsArray) => {
@@ -77,6 +77,19 @@ function change(consonant) {
 }
 console.log("3. Change it up!");
 console.log(change(txt));
+//Sir Rain's Version
+var c = "Cat30";
+var checkList = "AabcdEefghIijklmnOopqrstUuvwxyz";
+var newString = c.replace(/[a-z]/gi, s => checkList[(checkList.indexOf(s.toLowerCase()) + 1) % checkList.length]);
+console.log("NEW STRING: " + newString);
+//Another Version
+const newVersionString = (c) => {
+    let checkList = "AabcdEefghIijklmnOopqrstUuvwxyz";
+    let output = c.replace(/[a-z]/gi, (s) => checkList[(checkList.indexOf(s.toLowerCase()) + 1) % checkList.length]);
+    console.log("New String: " + output);
+};
+exports.newVersionString = newVersionString;
+(0, exports.newVersionString)('Cat30');
 //4
 function moveZeros(array) {
     var length = array.length, i = length;
@@ -94,3 +107,4 @@ function moveZeros(array) {
 var array = [false, 2, 0, 0, 3, 0, 5, 3, "a"];
 console.log("4. Moving zeroes to the end");
 console.log(...moveZeros(array));
+//var newString = c.replace(/[a-z]/gi, s => checkList[(checkList.indexOf(s.toLowerCase()) + 1) % checkList.length]);

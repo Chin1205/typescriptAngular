@@ -1,4 +1,97 @@
-<script>exports = {__esModule:true}</script>
-<script src="./index.js"></script>
+<html>
 
-<input 
+<head>
+
+    <script>exports = { __esModule: true }</script>
+    <script src="./index.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+        crossorigin="anonymous">
+
+    <style>
+        #logo-rsp-image {
+            width: 56%;
+            height: 20%;
+        }
+
+        .navbar-nav {
+            font-size: 15px;
+            font: montserrat;
+            padding-left: 52px;
+        }
+
+        .navbar-nav>li {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .form {
+            margin-top: 70px;
+        }
+    </style>
+
+    <title>Enrollment Form</title>
+</head>
+
+<body>
+    
+    <div class="navbar navbar-expand-lg bg-dark" style="height: 90px">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home"> <img src="https://gateway.77soft.com/images/77whitetransparent.png"
+                    alt="77L&D" id="logo-rsp-image">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white bg-dark" aria-current="page" href="home">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white bg-dark">About
+                            Us</a></li>
+                    <li class="nav-item"><a class="nav-link active text-white bg-dark" href="learner">Enrollment
+                            Form</a></li>
+                    <li class="nav-item"><a class="nav-link text-white bg-dark" href="course">Course Form</a></li>
+                    <li class="nav-item"><a class="nav-link text-white bg-dark" href="learners">List of Learners</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white bg-dark" href="courses">List of Courses</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="form" align="center">
+
+            <input type="text" id="city" placeholder="Enter City Name" style="width: 20%" />
+            <br></br>
+
+            <input type="text" id="country" placeholder="Enter Country" style="width: 20%" />
+            <br></br>
+
+            <!-- <input type="text" id="myWheel" placeholder="Enter Population" style="width: 20%" /> -->
+            <br></br>
+
+            <button onclick="
+            addPlace(document.getElementById('city').value, 
+            addPlace(document.getElementById('country').value))">Add</button>
+        
+            <ul id="myList">
+        
+            </ul>
+
+        </form:form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
